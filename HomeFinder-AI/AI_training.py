@@ -6,8 +6,12 @@ from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 import xgboost as xgb
-#import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score
+
+from skl2onnx import convert_sklearn
+from skl2onnx.common.data_types import FloatTensorType
+
+#import matplotlib.pyplot as plt
 #import seaborn as sns
 
 def load_and_preprocess_data(file_path, delimiter=';', target_column='Loan_Status', positive_class_label='Y'):
@@ -100,7 +104,13 @@ y_pred = best_model.predict(X_test) # let the best model to predict the test dat
 test_accuracy = accuracy_score(y_test, y_pred) # gives the accuracy
 print(f"Test Accuracy of {best_model}: {test_accuracy * 100:.2f}%") # prints the result
 
-import joblib
 
-# Save the trained model
-joblib.dump(best_model, 'AI_model.joblib')
+# Convert the model to ONNX format
+initial_type = [('float_input', FloatTensorType([None, 4]))]
+onnx_model = convert_sklearn(best_model, initial_types=initial_type)
+
+# Save the ONNX model to a file
+with open('ai_model.onnx', 'wb') as f:
+    f.write(onnx_model.SerializeToString())
+
+print('ONNX model saved successfully.')
