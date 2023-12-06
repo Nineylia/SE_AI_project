@@ -107,6 +107,11 @@ export const getListings = async (req, res, next) => {
       ...(req.query.offer === "true" && { offer: true }),
       ...(req.query.furnished === "true" && { furnished: true }),
       ...(req.query.parking === "true" && { parking: true }),
+      ...(req.query.university === "true" && { university: true }),
+      ...(req.query.grocerystore === "true" && { grocerystore: true }),
+      ...(req.query.shoppingcenter === "true" && { shoppingcenter: true }),
+      ...(req.query.cinema === "true" && { cinema: true }),
+      ...(req.query.fitness === "true" && { fitness: true }),
       ...(req.query.type === "sale" || req.query.type === "rent"
         ? { type: req.query.type }
         : { type: { $in: ["sale", "rent"] } }),

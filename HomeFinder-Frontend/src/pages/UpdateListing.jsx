@@ -29,6 +29,11 @@ export default function CreateListing() {
     offer: false,
     parking: false,
     furnished: false,
+    university: false,
+    grocerystore: false,
+    shoppingcenter: false,
+    cinema: false,
+    fitness: false,
   });
   const [imageUploadError, setImageUploadError] = useState(false);
   const [uploading, setUploading] = useState(false);
@@ -389,6 +394,59 @@ export default function CreateListing() {
                 </label>
               </div>
             )}
+          </div>
+
+          <div className="flex gap-5 flex-wrap">
+            <div className="flex gap-3">
+              <input
+                type="checkbox"
+                id="university"
+                className="w-5"
+                onChange={handleChange}
+                checked={formData.university}
+              ></input>
+              <span>University</span>
+            </div>
+            <div className="flex gap-3">
+              <input
+                type="checkbox"
+                id="grocerystore"
+                className="w-5"
+                onChange={handleChange}
+                checked={formData.grocerystore}
+              ></input>
+              <span>Grocery Store</span>
+            </div>
+            <div className="flex gap-3">
+              <input
+                type="checkbox"
+                id="shoppingcenter"
+                className="w-5"
+                onChange={handleChange}
+                checked={formData.shoppingcenter}
+              ></input>
+              <span>Shopping Center</span>
+            </div>
+            <div className="flex gap-3">
+              <input
+                type="checkbox"
+                id="cinema"
+                className="w-5"
+                onChange={handleChange}
+                checked={formData.cinema}
+              ></input>
+              <span>Cinema</span>
+            </div>
+            <div className="flex gap-3">
+              <input
+                type="checkbox"
+                id="fitness"
+                className="w-5"
+                onChange={handleChange}
+                checked={formData.fitness}
+              ></input>
+              <span>Fitness Center</span>
+            </div>      
           </div>
 
           {/*the annoying little shit code to upload files aka images and submit //TODO ADD MORE */}

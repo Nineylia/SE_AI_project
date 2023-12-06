@@ -8,10 +8,15 @@ import "swiper/css/bundle";
 import {
   FaBath,
   FaBed,
+  FaBuilding,
+  FaCamera,
   FaChair,
   FaMapMarkerAlt,
   FaParking,
   FaShare,
+  FaShoppingBag,
+  FaShoppingBasket,
+  FaWeight,
 } from "react-icons/fa";
 import Contact from "../Components/Contact";
 
@@ -169,6 +174,26 @@ export default function Listing() {
                   <li className="flex items-center gap-1 whitespace-nowrap ">
                     <FaChair className="text-lg" />
                     {listing.furnished ? "Furnished" : "Unfurnished"}
+                  </li>
+                  <li className="flex items-center gap-1 whitespace-nowrap ">
+                    <FaBuilding className="text-lg" />
+                    {listing.university ? "University" : "No University near by"}
+                  </li>
+                  <li className="flex items-center gap-1 whitespace-nowrap ">
+                    <FaShoppingBasket className="text-lg" />
+                    {listing.grocerystore ? "Grocery Store" : "No Grocery Store near by"}
+                  </li>
+                  <li className="flex items-center gap-1 whitespace-nowrap ">
+                    <FaShoppingBag className="text-lg" />
+                    {listing.shoppingcenter ? "Shopping Center" : "No Shopping Center near by"}
+                  </li>
+                  <li className="flex items-center gap-1 whitespace-nowrap ">
+                    <FaCamera className="text-lg" />
+                    {listing.cinema ? "Cinema" : "No Cinema near by"}
+                  </li>
+                  <li className="flex items-center gap-1 whitespace-nowrap ">
+                    <FaWeight className="text-lg" />
+                    {listing.fitness ? "Fitness Center" : "No Fitness Center near by"}
                   </li>
                 </ul>
                 {currentUser &&

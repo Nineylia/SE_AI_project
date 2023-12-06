@@ -47,6 +47,26 @@ const listingSchema = new mongoose.Schema(
       type: Boolean,
       required: true,
     },
+    university: {
+      type: Boolean,
+      required: true,
+    },
+    grocerystore: {
+      type: Boolean,
+      required: true,
+    },
+    shoppingcenter: {
+      type: Boolean,
+      required: true,
+    },
+    cinema: {
+      type: Boolean,
+      required: true,
+    },
+    fitness: {
+      type: Boolean,
+      required: true,
+    },    
     imageUrls: {
       type: Array,
       required: true,

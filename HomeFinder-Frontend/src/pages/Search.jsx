@@ -8,6 +8,11 @@ export default function Search() {
     parking: false,
     furnished: false,
     offer: false,
+    university: false,
+    grocerystore: false,
+    shoppingcenter: false,
+    cinema: false,
+    fitness: false,
     sort: "created_at",
     order: "desc",
   });
@@ -37,7 +42,7 @@ export default function Search() {
     }
 
     // Handling 'parking', 'furnished', and 'offer' checkboxes
-    if (["parking", "furnished", "offer"].includes(id)) {
+    if (["parking", "furnished", "offer", "university", "grocerystore", "shoppingcenter", "cinema", "fitness"].includes(id)) {
       update[id] = checked;
     }
 
@@ -86,6 +91,11 @@ export default function Search() {
         parking: parseBooleanParam(urlParams.get("parking")),
         furnished: parseBooleanParam(urlParams.get("furnished")),
         offer: parseBooleanParam(urlParams.get("offer")),
+        university: parseBooleanParam(urlParams.get("university")),
+        grocerystore: parseBooleanParam(urlParams.get("grocerystore")),
+        shoppingcenter: parseBooleanParam(urlParams.get("shoppingcenter")),
+        cinema: parseBooleanParam(urlParams.get("cinema")),
+        fitness: parseBooleanParam(urlParams.get("fitness")),
         sort: urlParams.get("sort") || "created_at",
         order: urlParams.get("order") || "desc",
       });
@@ -138,7 +148,7 @@ export default function Search() {
   return (
     <div className="bg-gray-200 bg-opacity-70">
       <div className="flex flex-col md:flex-row text-black">
-        <div className="p-7 border-b-2 md:border-r-2 md:min-h-screen border-black">
+        <div className="md:w-1/4 p-7 border-b-2 md:border-r-2 md:min-h-screen border-black">
           <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
             <div className="flex items-center gap-2">
               <label
@@ -204,7 +214,7 @@ export default function Search() {
             </div>
             {/*Copy here down down there to add a whole new one for more filters later */}
             <div className="flex gap-2 flex-wrap items-center">
-              <label className="font-semibold">Ameneties</label>
+              <label className="font-semibold">Ameneties:</label>
               {/*Coppy this div if you want to add stuf 4 rows down  */}
               <div className="flex gap-2">
                 <input
@@ -225,6 +235,60 @@ export default function Search() {
                   checked={sidebardata.furnished}
                 />
                 <span>Furniture</span>
+              </div>
+            </div>
+            <div className="flex gap-2 flex-wrap items-center">
+              <label className="font-semibold">Nearby Facilities:</label>
+              {/*Coppy this div if you want to add stuf 4 rows down  */}
+              <div className="flex gap-2">
+                <input
+                  type="checkbox"
+                  id="university"
+                  className="w-5"
+                  onChange={handleChange}
+                  checked={sidebardata.university}
+                />
+                <span>University</span>
+              </div>
+              <div className="flex gap-2">
+                <input
+                  type="checkbox"
+                  id="grocerystore"
+                  className="w-5"
+                  onChange={handleChange}
+                  checked={sidebardata.grocerystore}
+                />
+                <span>Grocery Store</span>
+              </div>
+              <div className="flex gap-2">
+                <input
+                  type="checkbox"
+                  id="shoppingcenter"
+                  className="w-5"
+                  onChange={handleChange}
+                  checked={sidebardata.shoppingcenter}
+                />
+                <span>Shopping Center</span>
+              </div>
+              <div className="flex gap-2">
+                <input
+                  type="checkbox"
+                  id="cinema"
+                  className="w-5"
+                  onChange={handleChange}
+                  checked={sidebardata.cinema}
+                />
+                <span>Cinema</span>
+              </div>
+              <div className="flex gap-2">
+                <input
+                  type="checkbox"
+                  id="fitness"
+                  className="w-5"
+                  onChange={handleChange}
+                  checked={sidebardata.fitness}
+                />
+                <span>Fitness Center</span>
               </div>
             </div>
             {/*Copy here down down there to add a whole new one for more filters later */}
