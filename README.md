@@ -5,7 +5,7 @@ Homefinder is a website that shifts the focus of property search away from geogr
 ## ✨ Proposal
 to be announced
 ## ✨ Demo Video
-[![Video Title](https://img.youtube.com/vi/7K3Hfz9UwnM/0.jpg)](https://www.youtube.com/watch?v=7K3Hfz9UwnM)
+[![Video Title](https://img.youtube.com/vi/7K3Hfz9UwnM/maxresdefault.jpg)](https://www.youtube.com/watch?v=7K3Hfz9UwnM)
 
 ## ✨ Main Function
 to be announced
