@@ -25,7 +25,7 @@ to be announced
 
 ## 🔗 Links
 **Click here**   
-       [Notion](https://www.notion.so/SE-AI-PROJECT-049c1785b9c34c42b0e3df434063abc9) 
+       [Notion](https://www.notion.so/HomeFinder-049c1785b9c34c42b0e3df434063abc9) 
          [Youtube](https://www.youtube.com/watch?v=7K3Hfz9UwnM)
 
 
