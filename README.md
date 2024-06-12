@@ -18,7 +18,7 @@ to be announced
 |----------------------|---------------------------|--------------------------------|------------------------|
 | William Olsson       | Dept. of Information systems | Lobbeolsson@gmail.com        |Backend Developer<br>AI Developer|
 | Nina Lauria          | Dept. of Information systems | ninalauria01@gmail.com       |Frontend Developer<br>Document |
-| Jeong JinYeong       | Dept. of Information systems | tttjjjyyy1234@daum.net        |Backend Developer<br>Product Design |
+| Jung JinYeong       | Dept. of Information systems | tttjjjyyy1234@daum.net        |Backend Developer<br>Product Design |
 | Enkhjin Puntsagnorov | Dept. of Information systems | enhjinnsaa48@gmail.com       | Frontend Developer<br>Document|
 | Sebti Ilian          | Dept. of Information systems | ilian.sebti@edu.devinci.fr    |Backend Developer<br>API|
 
